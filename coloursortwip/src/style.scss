@@ -1,0 +1,144 @@
+body {
+  font-family: Arial, sans-serif;
+}
+.main {
+  width: 100%;
+  .controls {
+    float: left;
+    width: calc(40% - 40px);
+    height: 100vh;
+    margin: 20px;
+    .buttons {
+      text-align: center;
+      button {
+        width: 100px;
+        height: 40px;
+        margin: 10px 20px 10px 0;
+        display: block;
+        &:first-child {
+          margin-top: 0;
+        }
+      }
+      #new-array-button,
+      #sort-button {
+      }
+    }
+    ul.radio-buttons {
+      list-style: none;
+      padding-left: 0;
+      display: block;
+      li {
+        margin-bottom: 20px;
+        input {
+        }
+        label {
+        }
+      }
+    }
+  }
+  .display {
+    width: 60%;
+    position: relative;
+    float: left;
+    height: 100vh;
+    .container,
+    #container {
+      width: 260px;
+      margin: 20px 0;
+      display: block;
+      float: left;
+    }
+    progress {
+      width: 100%;
+      display: block;
+      float: left;
+      clear: left;
+    }
+    progress[value] {
+      width: 260px;
+      height: 50px;
+    }
+
+    progress[value]::-webkit-progress-value {
+      background-image: -webkit-linear-gradient(
+          -45deg,
+          transparent 33%,
+          rgba(0, 0, 0, 0.1) 33%,
+          rgba(0, 0, 0, 0.1) 66%,
+          transparent 66%
+        ),
+        -webkit-linear-gradient(top, rgba(255, 255, 255, 0.25), rgba(0, 0, 0, 0.25)),
+        -webkit-linear-gradient(left, #09c, #f44);
+
+      border-radius: 2px;
+      background-size: 35px 20px, 100% 100%, 100% 100%;
+    }
+    @-webkit-keyframes animate-stripes {
+      100% {
+        background-position: -100px 0px;
+      }
+      @keyframes animate-stripes {
+        100% {
+          background-position: -100px 0px;
+        }
+      }
+      -webkit-animation: animate-stripes 5s linear infinite;
+      animation: animate-stripes 5s linear infinite;
+    }
+    .algo-info {
+      clear: left;
+      width: 260px;
+      text-align: center;
+      margin: 0;
+      padding: 20px 0;
+      line-height: 10px;
+      color: #333;
+      background: #efefef;
+      h4 {
+        text-align: left;
+        margin: 30px 20px 0 20px;
+        padding: 0;
+        color: #666;
+      }
+      p {
+        line-height: 20px;
+        font-size: 14px;
+        text-align: left;
+        padding: 0 20px;
+        color: #666;
+      }
+      sup {
+        font-size: 12px;
+      }
+    }
+  }
+  .cubes {
+    width: 10px;
+    height: 10px;
+    background: blue;
+    color: #fff;
+    display: inline-block;
+    float: left;
+    position: relative;
+    margin: 1px;
+  }
+
+  .vertical-gradient {
+    width: 260px;
+    height: 1px;
+    background: blue;
+    color: #fff;
+    position: relative;
+    float: left;
+  }
+
+  .horizontal-lines {
+    width: 2px;
+    height: 260px;
+    margin: 0 1px;
+    background: blue;
+    color: #fff;
+    position: relative;
+    float: left;
+  }
+}
